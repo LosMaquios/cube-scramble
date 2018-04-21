@@ -48,11 +48,7 @@ function finite (moves) {
   const map = {}
 
   moves.forEach(move => {
-    const states = moves.slice()
-
-    states.splice(moves.indexOf(move), 1)
-
-    map[move] = states
+    map[move] = moves.filter(_move => _move !== move)
   })
 
   return map
