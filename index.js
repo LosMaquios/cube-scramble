@@ -19,7 +19,7 @@ const defaults = {
  * @return {Array.<string>}
  */
 export function scramble (moves, options) {
-  options = Object.assign({}, options, defaults)
+  options = Object.assign({}, defaults, options)
 
   const scrambled = []
 
