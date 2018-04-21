@@ -1,6 +1,6 @@
 # Cube Scramble
 
-  Blazing fast cube scramble by using a [finite-state machine](https://en.wikipedia.org/wiki/Finite-state_machine) algorithm.
+  Blazing fast cube scramble by using a [finite-state machine](https://en.wikipedia.org/wiki/Finite-state_machine) based algorithm.
 
 ## Usage
 

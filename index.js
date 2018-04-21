@@ -1,4 +1,9 @@
-
+/**
+ * Default `scramble` options
+ *
+ * @prop {Array.<string>} variations - An array of move variations
+ * @prop {number} length - Result scramble length
+ */
 const defaults = {
   variations: ['\'', '2', ''],
   length: 20
