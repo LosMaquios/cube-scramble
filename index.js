@@ -1,7 +1,7 @@
 /**
  * Default `scramble` options
  *
- * @prop {Array.<string>} variations - An array of move variations
+ * @prop {Array.<string>} variations - Move variations
  * @prop {number} length - Result scramble length
  */
 const defaults = {
@@ -12,9 +12,10 @@ const defaults = {
 /**
  * Scramble input moves
  *
- * @param {Array.<string>} moves
+ * @param {Array.<string>} moves - Move notations
  * @param {Object} [options]
  * @param {Array.<string>} [options.variations]
+ * @param {number} [options.length]
  *
  * @return {Array.<string>}
  */
