@@ -23,15 +23,14 @@ export function scramble (moves, options) {
   options = Object.assign({}, defaults, options)
 
   const scrambled = []
-
-  let next = random(moves)
-  let cycle = options.length
-
   const table = generateTable(moves)
 
+  let actual = random(moves)
+  let cycle = options.length
+
   do {
-    scrambled.push(next + random(options.variations))
-  } while (--cycle && (next = random(table[next])))
+    scrambled.push(actual + random(options.variations))
+  } while (--cycle && (actual = random(table[actual])))
 
   return scrambled
 }
