@@ -27,30 +27,30 @@ export function scramble (moves, options) {
   let next = random(moves)
   let cycle = options.length
 
-  const states = finite(moves)
+  const table = generateTable(moves)
 
   do {
     scrambled.push(next + random(options.variations))
-  } while (--cycle && (next = random(states[next])))
+  } while (--cycle && (next = random(table[next])))
 
   return scrambled
 }
 
 /**
- * Create a new map of states
+ * Generate a new state transition table
  *
  * @param {Array.<string>} moves
  *
  * @return {Object}
  */
-function finite (moves) {
-  const map = {}
+function generateTable (moves) {
+  const table = {}
 
   moves.forEach(move => {
-    map[move] = moves.filter(_move => _move !== move)
+    table[move] = moves.filter(_move => _move !== move)
   })
 
-  return map
+  return table
 }
 
 /**
