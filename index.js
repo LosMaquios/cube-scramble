@@ -28,11 +28,9 @@ export function scramble (moves, options) {
 
   const states = finite(moves)
 
-  while (cycle--) {
+  do {
     scrambled.push(next + random(options.variations))
-
-    next = random(states[next])
-  }
+  } while (--cycle && (next = random(states[next])))
 
   return scrambled
 }
